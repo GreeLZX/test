@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="struts2_lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../struts2_lib" />
+      <root url="jar://C:/Program Files/Java/mysql-connector-java-8.0.19/mysql-connector-java-8.0.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../struts2_lib" recursive="false" />
+  </library>
+</component>

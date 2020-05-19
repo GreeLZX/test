@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <package name="struts_tag" extends="struts-default" namespace="/">
+        <global-results>
+            <result name="login" type="redirect">/login.jsp</result>
+        </global-results>
+        <action name="checkLogin" class="com.bitzh.action.LoginAction">
+            <result name="success">/main.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+
+        <action name="index" class="com.bitzh.action.StudentAction" method="GetList">
+            <result name="showList">main.jsp</result>
+        </action>
+
+        <action name="delete" class="com.bitzh.action.StudentAction" method="GetDelete">
+            <result name="GetList" type="redirect">main.jsp</result>
+        </action>
+
+        <action name="detail" class="com.bitzh.action.StudentAction" method="GetDetail">
+            <result name="showDetail">update.jsp</result>
+        </action>
+
+        <action name="update" class="com.bitzh.action.StudentAction" method="GetUpdate">
+            <result name="GetList" type="redirect">main.jsp</result>
+        </action>
+
+        <action name="insert" class="com.bitzh.action.StudentAction" method="GetInsert">
+            <result name="GetList" type="redirect">main.jsp</result>
+        </action>
+
+
+    </package>
+
+
+</struts>
